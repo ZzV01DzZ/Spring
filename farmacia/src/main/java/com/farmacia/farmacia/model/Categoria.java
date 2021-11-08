@@ -1,5 +1,6 @@
 package com.farmacia.farmacia.model;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -31,12 +32,10 @@ public class Categoria {
 	private String descricao;
 	
 	@NotBlank
-	@Size (max = 10 , message = "A data deve conter no máximo 10 caracteres")
-	private String data;
+	private Date data;
 	
 	@NotBlank
-	@Size (max = 3 , message = "A receita deve conter no máximo 3 caracteres")
-	private String receita;
+	private Boolean receita;
 	
 
 
@@ -68,19 +67,19 @@ public class Categoria {
 		this.descricao = descricao;
 	}
 
-	public String getData() {
+	public Date getData() {
 		return data;
 	}
 
-	public void setData(String data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
 
-	public String getReceita() {
+	public Boolean getReceita() {
 		return receita;
 	}
 
-	public void setReceita(String receita) {
+	public void setReceita(Boolean receita) {
 		this.receita = receita;
 	}
 
